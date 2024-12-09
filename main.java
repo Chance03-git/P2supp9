@@ -1,6 +1,20 @@
+import java.util.ArrayList;
 import java.util.List;
 
-public class main{
+public class Main{
+
+    
+    public static List<Integer> getEvenNumbers(List<Integer> numbers) {
+        List<Integer> evenNumbers = new ArrayList<>();
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                evenNumbers.add(number);
+            }
+        }
+        return evenNumbers;
+    }
+
+    // Test Cases
     public static void runTests() {
         List<Integer> testInput1 = List.of(1, 2, 3, 4, 5, 6);
         List<Integer> expected1 = List.of(2, 4, 6);
