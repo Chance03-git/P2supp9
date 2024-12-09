@@ -1,4 +1,10 @@
 public class Uppercase {
+    public static String toUpperCase(String input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Input string cannot be null");
+        }
+        return input.toUpperCase();
+    }
     // Test Cases
     public static void runTests() {
         String testInput1 = "hello";
@@ -24,4 +30,4 @@ public class Uppercase {
         System.out.println("Uppercase: " + toUpperCase(input));
     }
 }
-}
+
