@@ -1,6 +1,23 @@
 import java.util.List;
 
 public class Longstring {
+    public static String getLongestString(List<String> strings) {
+        if (strings == null) {
+            throw new IllegalArgumentException("Input list cannot be null");
+        }
+        if (strings.isEmpty()) {
+            return null;
+        }
+
+        String longest = "";
+        for (String str : strings) {
+            if (str != null && str.length() > longest.length()) {
+                longest = str;
+            }
+        }
+        return longest;
+    }
+
     // Test Cases
     public static void runTests() {
         List<String> testInput1 = List.of("apple", "banana", "cherry");
@@ -13,7 +30,7 @@ public class Longstring {
 
         List<String> testInput3 = List.of();
         String expected3 = null;
-        System.out.println("Test 3: " + (getLongestString(testInput3) == expected3 ? "Passed" : "Failed"));
+        System.out.println("Test 3: " + (getLongestString(testInput3).equals(expected3) ? "Passed" : "Failed"));
 
         List<String> testInput4 = List.of("same", "size", "test");
         String expected4 = "same"; // Ties are resolved by first occurrence
