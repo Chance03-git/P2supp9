@@ -1,6 +1,14 @@
 import java.util.List;
 
 public class Longstring {
+    /**
+     * Returns the longest string in the provided list of strings.
+     *
+     * @param strings The list of strings to process.
+     * @return The longest string from the list. If the list is empty, returns null.
+     * @throws IllegalArgumentException if the input list is null.
+     */
+
     public static String getLongestString(List<String> strings) {
         if (strings == null) {
             throw new IllegalArgumentException("Input list cannot be null");
