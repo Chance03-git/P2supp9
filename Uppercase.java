@@ -1,4 +1,10 @@
 public class Uppercase {
+    /**
+     * Converts all characters in the given string to uppercase.
+     *
+     * @param input The input string.
+     * @return A new string with all characters converted to uppercase.
+     */
     public static String toUpperCase(String input) {
         if (input == null) {
             throw new IllegalArgumentException("Input string cannot be null");
