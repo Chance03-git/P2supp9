@@ -3,7 +3,12 @@ import java.util.List;
 
 public class Main{
 
-    
+    /**
+     * Returns a list of all even numbers from the provided list of integers.
+     *
+     * @param numbers List of integers to process.
+     * @return List of integers containing only even numbers from the input.
+     */
     public static List<Integer> getEvenNumbers(List<Integer> numbers) {
         List<Integer> evenNumbers = new ArrayList<>();
         for (int number : numbers) {
